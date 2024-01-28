@@ -3,16 +3,16 @@ const ResponsiveBackground = ({ children }) => {
     <>
       {/* desktop view */}
       <div
-        className="hidden lg:block bg-cover h-screen"
+        className="hidden lg:flex flex-col bg-cover h-dvh w-dvh "
         style={{
           backgroundImage: "url('/src/assets/background-home-desktop.jpg')",
         }}
       >
         {children}
       </div>
-      {/* tablet view */}
+      {/* tablet view */} 
       <div
-        className="hidden md:block lg:hidden bg-cover h-screen"
+        className="hidden md:flex flex-col lg:hidden bg-cover h-dvh"
         style={{
           backgroundImage: "url('/src/assets/background-home-tablet.jpg')",
         }}
@@ -21,7 +21,7 @@ const ResponsiveBackground = ({ children }) => {
       </div>
       {/* mobile view */}
       <div
-        className="md:hidden bg-cover h-screen"
+        className="md:hidden flex flex-col bg-cover h-dvh"
         style={{
           backgroundImage: "url('/src/assets/background-home-mobile.jpg')",
         }}
