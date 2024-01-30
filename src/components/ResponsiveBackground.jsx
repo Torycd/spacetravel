@@ -1,6 +1,7 @@
 import desktop from "../assets/background-home-desktop.jpg";
 import tablet from "../assets/background-home-tablet.jpg";
 import phone from "../assets/background-home-mobile.jpg";
+// import  PropTypes from "prop-types";
 
 const ResponsiveBackground = ({ children }) => {
   return (
@@ -9,7 +10,7 @@ const ResponsiveBackground = ({ children }) => {
       <div
         className="hidden lg:flex flex-col bg-cover max-h-full "
         style={{
-          backgroundImage: desktop,
+          backgroundImage: `url('/src/assets/background-home-desktop.jpg')`,
         }}
       >
         {children}
@@ -35,5 +36,9 @@ const ResponsiveBackground = ({ children }) => {
     </>
   );
 };
+
+// ResponsiveBackground.propType = {
+//   children: PropTypes.node.isRequired
+// }
 
 export default ResponsiveBackground;
