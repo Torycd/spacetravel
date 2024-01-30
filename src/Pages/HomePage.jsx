@@ -14,7 +14,7 @@ const HomePage = () => {
         </p>
       </div>
 
-      <div className="sm:w-64 sm:h-64 w-44 h-44 flex items-center justify-center mt-10 rounded-full my-auto mx-auto bg-white sm:ml-40  sm:mr-60">
+      <div className="sm:w-64 sm:h-64 w-44 h-44 flex items-center justify-center rounded-full my-auto mx-auto bg-white sm:ml-40 sm:mr-60">
         <h2 className="text-black font-semibold sm:text-3xl">Explore</h2>
       </div>
     </div>

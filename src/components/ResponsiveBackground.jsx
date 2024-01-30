@@ -36,4 +36,6 @@ const ResponsiveBackground = ({ children }) => {
   );
 };
 
+
+
 export default ResponsiveBackground;
