@@ -3,7 +3,7 @@ const ResponsiveBackground = ({ children }) => {
     <>
       {/* desktop view */}
       <div
-        className="hidden lg:flex flex-col bg-cover h-dvh w-dvh "
+        className="hidden lg:flex flex-col bg-cover h-dvh "
         style={{
           backgroundImage: "url('/src/assets/background-home-desktop.jpg')",
         }}
@@ -21,7 +21,7 @@ const ResponsiveBackground = ({ children }) => {
       </div>
       {/* mobile view */}
       <div
-        className="md:hidden flex flex-col bg-cover h-dvh"
+        className="md:hidden flex flex-col bg-cover max-w-full h-dvh"
         style={{
           backgroundImage: "url('/src/assets/background-home-mobile.jpg')",
         }}
