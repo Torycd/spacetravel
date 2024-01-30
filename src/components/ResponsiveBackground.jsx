@@ -19,7 +19,7 @@ const ResponsiveBackground = ({ children }) => {
       <div
         className="hidden md:flex flex-col lg:hidden bg-cover h-dvh"
         style={{
-          backgroundImage: tablet,
+          backgroundImage: `url('/src/assets/background-home-tablet.jpg')`,
         }}
       >
         {children}
@@ -28,7 +28,7 @@ const ResponsiveBackground = ({ children }) => {
       <div
         className="md:hidden flex flex-col bg-cover max-w-full h-dvh"
         style={{
-          backgroundImage: phone,
+          backgroundImage: `url('/src/assets/background-home-mobile.jpg')`,
         }}
       >
         {children}
