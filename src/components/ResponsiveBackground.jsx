@@ -7,7 +7,7 @@ const ResponsiveBackground = ({ children }) => {
     <>
       {/* desktop view */}
       <div
-        className="hidden lg:flex flex-col bg-cover h-dvh "
+        className="hidden lg:flex flex-col bg-cover max-h-full "
         style={{
           backgroundImage: desktop,
         }}
