@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const SpaceNavigation = () => {
   return (
     <div className="flex text-white justify-between mt-10">
@@ -12,28 +14,59 @@ const SpaceNavigation = () => {
           </g>
         </svg>
       </div>
-      
+      <hr className="bg-white text-bold" />
+
       <div className="bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-transparent bg-opacity-20">
         <ul className="flex justify-around gap-10 ml-40  mr-60 h-full">
-          <li className="my-auto">
-            <a>
+          <li className="h-full flex items-center">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "h-full flex items-center border-b-8 border-white"
+                  : "h-full flex items-center border-none"
+              }
+              end
+            >
               <span>01</span> Home
-            </a>
+            </NavLink>
           </li>
-          <li className="my-auto">
-            <a>
+
+          <li className="h-full flex items-center">
+            <NavLink
+              to="/Destination"
+              className={({ isActive }) => (
+                isActive
+                  ? "h-full flex items-center border-b-8 border-white"
+                  : "h-full flex items-center border-none"
+              )}
+            >
               <span>02</span> Destination
-            </a>
+            </NavLink>
           </li>
-          <li className="my-auto">
-            <a>
+          <li className="h-full flex items-center">
+            <NavLink
+              to="/Crew"
+              className={({ isActive }) => (
+                isActive
+                  ? "h-full flex items-center border-b-8 border-white"
+                  : "h-full flex items-center border-none"
+              )}
+            >
               <span>03</span> Crew
-            </a>
+            </NavLink>
           </li>
-          <li className="my-auto">
-            <a>
+          <li className="h-full flex items-center">
+            <NavLink
+              to="/Technology"
+              className={({ isActive }) => (
+                isActive
+                  ? "h-full flex items-center border-b-8 border-white"
+                  : "h-full flex items-center border-none"
+              )}
+            >
               <span>04</span> Technology
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>
