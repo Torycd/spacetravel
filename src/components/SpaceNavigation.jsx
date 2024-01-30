@@ -16,14 +16,14 @@ const SpaceNavigation = () => {
       </div>
       <hr className="bg-white text-bold" />
 
-      <div className="bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-transparent bg-opacity-20">
+      <div className="bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-transparent bg-opacity-20 hidden sm:block">
         <ul className="flex justify-around gap-10 ml-40  mr-60 h-full">
           <li className="h-full flex items-center">
             <NavLink
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "h-full flex items-center border-b-8 border-white"
+                  ? "h-full flex items-center border-b-4 border-white"
                   : "h-full flex items-center border-none"
               }
               end
@@ -35,11 +35,11 @@ const SpaceNavigation = () => {
           <li className="h-full flex items-center">
             <NavLink
               to="/Destination"
-              className={({ isActive }) => (
+              className={({ isActive }) =>
                 isActive
-                  ? "h-full flex items-center border-b-8 border-white"
+                  ? "h-full flex items-center border-b-4 border-white"
                   : "h-full flex items-center border-none"
-              )}
+              }
             >
               <span>02</span> Destination
             </NavLink>
@@ -47,11 +47,11 @@ const SpaceNavigation = () => {
           <li className="h-full flex items-center">
             <NavLink
               to="/Crew"
-              className={({ isActive }) => (
+              className={({ isActive }) =>
                 isActive
-                  ? "h-full flex items-center border-b-8 border-white"
+                  ? "h-full flex items-center border-b-4 border-white"
                   : "h-full flex items-center border-none"
-              )}
+              }
             >
               <span>03</span> Crew
             </NavLink>
@@ -59,11 +59,11 @@ const SpaceNavigation = () => {
           <li className="h-full flex items-center">
             <NavLink
               to="/Technology"
-              className={({ isActive }) => (
+              className={({ isActive }) =>
                 isActive
-                  ? "h-full flex items-center border-b-8 border-white"
+                  ? "h-full flex items-center border-b-4 border-white"
                   : "h-full flex items-center border-none"
-              )}
+              }
             >
               <span>04</span> Technology
             </NavLink>
