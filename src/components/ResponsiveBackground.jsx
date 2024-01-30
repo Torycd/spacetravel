@@ -1,3 +1,7 @@
+import desktop from '../assets/background-home-desktop.jpg'
+import tablet from '../assets/background-home-tablet.jpg';
+import phone from "../assets/background-home-mobile.jpg"
+
 const ResponsiveBackground = ({ children }) => {
   return (
     <>
@@ -5,7 +9,7 @@ const ResponsiveBackground = ({ children }) => {
       <div
         className="hidden lg:flex flex-col bg-cover h-dvh "
         style={{
-          backgroundImage: "url('/src/assets/background-home-desktop.jpg')",
+          backgroundImage: desktop,
         }}
       >
         {children}
@@ -14,7 +18,7 @@ const ResponsiveBackground = ({ children }) => {
       <div
         className="hidden md:flex flex-col lg:hidden bg-cover h-dvh"
         style={{
-          backgroundImage: "url('/src/assets/background-home-tablet.jpg')",
+          backgroundImage: tablet,
         }}
       >
         {children}
@@ -23,7 +27,7 @@ const ResponsiveBackground = ({ children }) => {
       <div
         className="md:hidden flex flex-col bg-cover max-w-full h-dvh"
         style={{
-          backgroundImage: "url('/src/assets/background-home-mobile.jpg')",
+          backgroundImage: phone,
         }}
       >
         {children}
