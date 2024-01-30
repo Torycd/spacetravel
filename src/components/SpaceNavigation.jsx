@@ -24,7 +24,7 @@ const SpaceNavigation = () => {
       </div>
 
       <div className="bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-transparent bg-opacity-20 hidden sm:block">
-        <ul className="flex justify-around gap-10 ml-40  mr-60 h-full">
+        <ul className="flex justify-around gap-10 ml-40  mr-60 h-full font-medium">
           <li className="h-full flex items-center">
             <NavLink
               to="/"
@@ -36,7 +36,7 @@ const SpaceNavigation = () => {
               end
             >
               <span>01</span>
-              <span>Home</span>
+              <span className="text-slate-200">Home</span>
             </NavLink>
           </li>
 
@@ -50,7 +50,7 @@ const SpaceNavigation = () => {
               }
             >
               <span>02</span>
-              <span>Destination</span>
+              <span className="text-slate-200">Destination</span>
             </NavLink>
           </li>
           <li className="h-full flex items-center">
@@ -63,7 +63,7 @@ const SpaceNavigation = () => {
               }
             >
               <span>03</span>
-              <span>Crew</span>
+              <span className="text-slate-200">Crew</span>
             </NavLink>
           </li>
           <li className="h-full flex items-center">
@@ -76,7 +76,7 @@ const SpaceNavigation = () => {
               }
             >
               <span>04</span>
-              <span>Technology</span>
+              <span className="text-slate-200">Technology</span>
             </NavLink>
           </li>
         </ul>

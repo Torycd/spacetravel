@@ -1,6 +1,6 @@
-import desktop from '../assets/background-home-desktop.jpg'
-import tablet from '../assets/background-home-tablet.jpg';
-import phone from "../assets/background-home-mobile.jpg"
+import desktop from "../assets/background-home-desktop.jpg";
+import tablet from "../assets/background-home-tablet.jpg";
+import phone from "../assets/background-home-mobile.jpg";
 
 const ResponsiveBackground = ({ children }) => {
   return (
@@ -14,7 +14,7 @@ const ResponsiveBackground = ({ children }) => {
       >
         {children}
       </div>
-      {/* tablet view */} 
+      {/* tablet view */}
       <div
         className="hidden md:flex flex-col lg:hidden bg-cover h-dvh"
         style={{
@@ -35,7 +35,5 @@ const ResponsiveBackground = ({ children }) => {
     </>
   );
 };
-
-
 
 export default ResponsiveBackground;
