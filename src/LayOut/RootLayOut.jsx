@@ -4,8 +4,10 @@ import ResponsiveBackground from "../components/ResponsiveBackground";
 
 const RootLayOut = () => {
   return (
+    // This Overall Background makes the image at the background diffrent on different device
     <ResponsiveBackground>
       <SpaceNavigation />
+      {/* This is where the other components load */}
       <Outlet />
     </ResponsiveBackground>
   );
