@@ -12,7 +12,9 @@ const App = () => {
       element: <RootLayOut />,
       children: [
         { path: "/", element: <HomePage /> },
-        { path: "/Destination", element: <Destination />, children: [] },
+        { path: "/Destination", element: <Destination />, children: [
+          {},{},{},{}
+        ] },
         { path: "/Crew", element: <Crew/>},
         { path: "/Technology", element: <Technology/>},
       ],
