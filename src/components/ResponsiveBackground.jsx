@@ -15,7 +15,13 @@ const ResponsiveBackground = ({ children }) => {
     backgroundImage = `url('/src/assets/background-home-desktop.jpg')`;
     backgroundImageTablet = `url('src/assets/background-home-tablet.jpg')`;
     backgroundImageMobile = `url('src/assets/background-home-mobile.jpg')`;
-  } else if (location.pathname == "/Destination") {
+  } else if (
+    location.pathname == "/Destination" ||
+    location.pathname == "/Destination/Mars" ||
+    location.pathname == "/Destination/Moon" ||
+    location.pathname == "/Destination/Titan" ||
+    location.pathname == "/Destination/Europa"
+  ) {
     backgroundImage = `url('/src/assets/background-destination-desktop.jpg')`;
     backgroundImageTablet = `url('/src/assets/background-destination-tablet.jpg')`;
     backgroundImageMobile = `url('/src/assets/background-destination-mobile.jpg')`;
@@ -23,7 +29,7 @@ const ResponsiveBackground = ({ children }) => {
     backgroundImage = `url('/src/assets/background-crew-desktop.jpg')`;
     backgroundImageTablet = `url('/src/assets/background-crew-tablet.jpg')`;
     backgroundImageMobile = `url('/src/assets/background-crew-mobile.jpg')`;
-  } else {
+  } else if (location.pathname == "/Technology") {
     backgroundImage = `url('/src/assets/background-technology-desktop.jpg')`;
     backgroundImageTablet = `url('/src/assets/background-technology-tablet.jpg')`;
     backgroundImageMobile = `url('/src/assets/background-technology-mobile.jpg')`;
