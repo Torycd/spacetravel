@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const SpaceNavigation = () => {
   return (
-    <div className="flex text-white justify-between mt-2 m-2 sm:mt-10 z-40">
+    <div className="flex text-white justify-between mt-2 m-2 sm:mt-10">
       <div className="sm:ml-10 my-3">
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
           <g fill="none" fillRule="evenodd">
