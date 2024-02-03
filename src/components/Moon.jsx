@@ -16,7 +16,7 @@ const Moon = () => {
         </span>
         <span className="flex flex-col gap-2">
           <p>travel time</p>
-          <p className="text-3xl">3 days</p>
+          <p className="text-3xl">3 s</p>
         </span>
       </div>
     </div>
