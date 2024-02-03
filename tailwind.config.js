@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Inte: ["Eb-Garamond"],
+        Inte: ["EB Garamond"],
       },
     },
     plugins: [],

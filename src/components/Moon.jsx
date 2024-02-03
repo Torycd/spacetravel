@@ -1,7 +1,7 @@
 const Moon = () => {
   return (
     <div className="flex flex-col gap-10 text-left mt-20">
-      <h1 className="text-8xl">MOON</h1>
+      <h1 className="text-8xl font-Inte font-extrabold">MOON</h1>
       <p>
         See our planet as youve never seen it before.<br/>  A perfect relaxing trip
         away to help regain perspective and<br/>  come back refreshed. While youre
@@ -9,7 +9,7 @@ const Moon = () => {
         sites.
       </p>
       <hr className="bg-white mr-40" />
-      <div className="flex justify-around mr-40">
+      <div className="flex justify-around mr-40 font-Inte">
         <span className="flex flex-col gap-2">
           <p>Avg. distance</p>
           <p className="text-3xl">384,400 km Est</p>
