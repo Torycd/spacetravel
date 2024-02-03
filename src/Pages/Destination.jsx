@@ -7,6 +7,7 @@ import europa from "../assets/image-europa.png"
 const Destination = () => {
   const location = useLocation()
 
+  // This change the image based in the sub navigation
   let img = moon;
   if (location.pathname == "/Destination/" ){
     img = moon
