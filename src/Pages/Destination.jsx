@@ -1,18 +1,21 @@
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import moon from "../assets/image-moon.png";
-// import titan from "../assets/image-titan.png";
-// import mars from "../assets/image-mars.png"
-// import europa from "../assets/image-europa.png"
+import titan from "../assets/image-titan.png";
+import mars from "../assets/image-mars.png"
+import europa from "../assets/image-europa.png"
 
 const Destination = () => {
   const location = useLocation()
 
   let img = moon;
-  if (location.pathname == "/" ){
-    // work on the decision
-    return;
-  } else if ( location.pathname == "//" ){
-    return;
+  if (location.pathname == "/Destination/" ){
+    img = moon
+  } else if ( location.pathname == "/Destination/Mars" ){
+    img = mars
+  } else if ( location.pathname == "/Destination/Europa"){
+    img = europa
+  } else if ( location.pathname == "/Destination/Titan"){
+    img = titan
   }
 
 

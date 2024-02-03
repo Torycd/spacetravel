@@ -11,11 +11,11 @@ const Titan = () => {
       <div className="flex justify-around mr-40">
         <span className="flex flex-col gap-2">
           <p>Avg. distance</p>
-          <p className="text-3xl">Avg. distanceAvg. distance</p>
+          <p className="text-3xl">1.6 bil. km</p>
         </span>
         <span className="flex flex-col gap-2">
           <p>Est. travel time</p>
-          <p className="text-3xl">9 months</p>
+          <p className="text-3xl">7 years</p>
         </span>
       </div>
     </div>
