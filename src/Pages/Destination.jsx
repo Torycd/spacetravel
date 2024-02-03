@@ -20,9 +20,9 @@ const Destination = () => {
 
 
   return (
-    <div className="text-white grid sm:grid-cols-2">
-      <div>
-        <img className="ml-10" src={img} alt="#" />
+    <div className="text-white gap-2 grid sm:grid-cols-2">
+      <div className="flex flex-col items-center">
+        <img className="" src={img} alt="#" />
       </div>
 
       <div>

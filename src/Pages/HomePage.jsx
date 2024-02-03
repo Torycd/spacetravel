@@ -3,7 +3,7 @@
 const HomePage = () => {
   return (      
       <div className="text-white flex flex-col m-2 sm:flex-row justify-between">
-      <div className="flex flex-col gap-8 sm:ml-10 sm:my-40">
+      <div className="flex flex-col gap-8 sm:ml-10 sm:my-32">
         <p className="font-normal sm:text-3xl text-center sm:text-right">
           So, you want to travel to
         </p>
