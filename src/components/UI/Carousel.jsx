@@ -5,7 +5,7 @@ const Carousel = ({ slides }) => {
     <div className="overflow-hidden">
       <div className="flex justify-center">
         {slides.map((s) => (
-          <div key={s.name} className="flex w-[1440px]">
+          <div key={s.name} className="flex w-[100%]">
             <div className="flex">
               <h1>{s.name}</h1>
               <h1>{s.postion}</h1>
