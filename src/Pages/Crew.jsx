@@ -1,4 +1,4 @@
-import { CarouselCustomNavigation } from "../components/UI/Carousel"
+import  Carousel  from "../components/UI/Carousel"
 import crew1 from "../assets/image-anousheh-ansari.png";
 import crew2 from "../assets/image-douglas-hurley.png";
 import crew3 from "../assets/image-victor-glover.png"
@@ -31,7 +31,7 @@ const Crew = () => {
       },
     ];
   return (
-    <CarouselCustomNavigation slides={slides}/>
+    <Carousel slides={slides}/>
   )
 }
 
