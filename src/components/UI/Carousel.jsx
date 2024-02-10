@@ -11,7 +11,9 @@ const Carousel = ({ slides }) => {
               <h1>{s.position}</h1>
               <p>{s.about}</p>
             </div>
-            <img src={s.img} className="w-1/2" alt={s.name} />
+            <div>
+              <img src={s.img} className="w-1/2" alt={s.name} />
+            </div>
           </div>
         </div>
       ))}
