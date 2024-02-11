@@ -46,6 +46,8 @@ const Crew = () => {
   const gotoSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
+
+  setInterval(nextSlide, 5000000);
   return (
     <div className="flex flex-col my-18 mx-2 text-white">
       <div className="flex group">
@@ -58,7 +60,7 @@ const Crew = () => {
           <img
             src={slides[currentIndex].url}
             alt={slides[currentIndex].name}
-            width={400}
+            className="w-full h-64 object-cover"
           />
         </div>
         {/* side buttons */}
