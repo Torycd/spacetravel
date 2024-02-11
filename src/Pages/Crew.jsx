@@ -31,10 +31,16 @@ const Crew = () => {
     },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ?  slides.length -1 : currentIndex  - 1;
+    setCurrentIndex(newIndex)
+  };
+  const nextSlide = () => {};
 
   return (
     <div className="my-18 text-white">
-      <div className="flex">
+      <div className="flex group">
         <div className="w-1/2">
           <h1 className="text-4xl">{slides[currentIndex].position}</h1>
           <h1 className="text-4xl">{slides[currentIndex].name}</h1>
@@ -47,11 +53,11 @@ const Crew = () => {
             width={400}
           />
         </div>
-        <div className="">
-          <BsChevronCompactLeft/>
+        <div  className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black text-white cursor-pointer duration-300 ease-in-out">
+          <BsChevronCompactLeft onClick={prevSlide} size={30}/>
         </div>
-        <div className="">
-          <BsChevronCompactRight/>
+        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black text-white cursor-pointer duration-300 ease-in-out">
+          <BsChevronCompactRight onClick={nextSlide} size={30}/>
         </div>
       </div>
     </div>
