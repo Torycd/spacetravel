@@ -39,7 +39,7 @@ const Crew = () => {
   const nextSlide = () => {};
 
   return (
-    <div className="my-18 text-white">
+    <div className="my-18 mx-2 text-white">
       <div className="flex group">
         <div className="w-1/2">
           <h1 className="text-4xl">{slides[currentIndex].position}</h1>
