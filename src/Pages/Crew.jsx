@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { BsChevronCompactLeft } from "react-icons/bs";
+import { BsChevronCompactRight } from "react-icons/bs";
 
 import imageDouglasHurley from "../assets/image-douglas-hurley.png";
 import imageAnoushehAnsari from "../assets/image-anousheh-ansari.png";
@@ -29,7 +31,6 @@ const Crew = () => {
     },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
-  
 
   return (
     <div className="my-18 text-white">
@@ -45,6 +46,12 @@ const Crew = () => {
             alt={slides[currentIndex].name}
             width={400}
           />
+        </div>
+        <div className="">
+          <BsChevronCompactLeft/>
+        </div>
+        <div className="">
+          <BsChevronCompactRight/>
         </div>
       </div>
     </div>
