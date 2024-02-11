@@ -29,16 +29,17 @@ const Crew = () => {
     },
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
+  
 
   return (
-    <div className="mt-32 text-white">
+    <div className="my-18 text-white">
       <div className="flex">
         <div className="w-1/2">
           <h1 className="text-4xl">{slides[currentIndex].position}</h1>
           <h1 className="text-4xl">{slides[currentIndex].name}</h1>
           <p>{slides[currentIndex].about}</p>
         </div>
-        <div className="w-1/2 align-end">
+        <div className="w-1/2 overflow-hidden">
           <img
             src={slides[currentIndex].url}
             alt={slides[currentIndex].name}
