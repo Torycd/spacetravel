@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BsChevronCompactLeft } from "react-icons/bs";
 import { BsChevronCompactRight } from "react-icons/bs";
+import { RxDotFilled } from "react-icons/rx"
 
 import imageDouglasHurley from "../assets/image-douglas-hurley.png";
 import imageAnoushehAnsari from "../assets/image-anousheh-ansari.png";
@@ -36,8 +37,15 @@ const Crew = () => {
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
-  const nextSlide = () => {};
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
 
+  const gotoSlides = () => {
+    
+  }
   return (
     <div className="my-18 mx-2 text-white">
       <div className="flex group">
@@ -53,11 +61,19 @@ const Crew = () => {
             width={400}
           />
         </div>
+        {/* side buttons */}
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black text-white cursor-pointer duration-300 ease-in-out">
           <BsChevronCompactLeft onClick={prevSlide} size={30} />
         </div>
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black text-white cursor-pointer duration-300 ease-in-out">
           <BsChevronCompactRight onClick={nextSlide} size={30} />
+        </div>
+        <div className="flex top-4 justify-center py-2">
+          {slides.map((slides, slideIndex) => (
+              <div key={slides.name} className="text-2xl cursor-pointer">
+                <RxDotFilled />
+              </div>
+          ))}
         </div>
       </div>
     </div>
