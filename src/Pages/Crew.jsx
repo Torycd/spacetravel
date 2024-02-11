@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BsChevronCompactLeft } from "react-icons/bs";
 import { BsChevronCompactRight } from "react-icons/bs";
-import { RxDotFilled } from "react-icons/rx"
+import { RxDotFilled } from "react-icons/rx";
 
 import imageDouglasHurley from "../assets/image-douglas-hurley.png";
 import imageAnoushehAnsari from "../assets/image-anousheh-ansari.png";
@@ -43,9 +43,9 @@ const Crew = () => {
     setCurrentIndex(newIndex);
   };
 
-  const gotoSlides = () => {
-    
-  }
+  const gotoSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
   return (
     <div className="my-18 mx-2 text-white">
       <div className="flex group">
@@ -70,9 +70,9 @@ const Crew = () => {
         </div>
         <div className="flex top-4 justify-center py-2">
           {slides.map((slides, slideIndex) => (
-              <div key={slides.name} className="text-2xl cursor-pointer">
-                <RxDotFilled />
-              </div>
+            <div key={slides.name} className="text-2xl cursor-pointer">
+              <RxDotFilled onClick={() => gotoSlide(slideIndex)} />
+            </div>
           ))}
         </div>
       </div>
