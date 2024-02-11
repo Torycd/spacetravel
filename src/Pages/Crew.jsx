@@ -47,7 +47,7 @@ const Crew = () => {
     setCurrentIndex(slideIndex);
   };
   return (
-    <div className="my-18 mx-2 text-white">
+    <div className="flex flex-col my-18 mx-2 text-white">
       <div className="flex group">
         <div className="w-1/2">
           <h1 className="text-4xl">{slides[currentIndex].position}</h1>
@@ -68,13 +68,13 @@ const Crew = () => {
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black text-white cursor-pointer duration-300 ease-in-out">
           <BsChevronCompactRight onClick={nextSlide} size={30} />
         </div>
-        <div className="flex top-4 justify-center py-2">
-          {slides.map((slides, slideIndex) => (
-            <div key={slides.name} className="text-2xl cursor-pointer">
-              <RxDotFilled onClick={() => gotoSlide(slideIndex)} />
-            </div>
-          ))}
-        </div>
+      </div>
+      <div className="flex top-4 justify-center py-2">
+        {slides.map((slides, slideIndex) => (
+          <div key={slides.name} className="text-2xl cursor-pointer">
+            <RxDotFilled onClick={() => gotoSlide(slideIndex)} />
+          </div>
+        ))}
       </div>
     </div>
   );
