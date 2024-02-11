@@ -2,17 +2,17 @@ import PropTypes from "prop-types";
 
 const Carousel = ({ slides }) => {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden flex w-[100%]">
       {slides.map((s) => (
-        <div key={s.name} className="flex justify-center">
-          <div className="flex w-full">
+        <div key={s.name} className="flex justify-center m-2">
+          <div className="flex w-full justify-around gap-10">
             <div className="w-1/2">
-              <h1>{s.name}</h1>
-              <h1>{s.position}</h1>
-              <p>{s.about}</p>
+              <h1 className="text-4xl">{s.name}</h1>
+              <h1 className="text-4xl">{s.position}</h1>
+              <p >{s.about}</p>
             </div>
-            <div>
-              <img src={s.img} className="w-1/2" alt={s.name} />
+            <div className="w-1/2">
+              <img src={s.img}  alt={s.name} />
             </div>
           </div>
         </div>
