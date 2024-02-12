@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BsChevronCompactLeft } from "react-icons/bs";
 import { BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
@@ -47,7 +47,13 @@ const Crew = () => {
     setCurrentIndex(slideIndex);
   };
 
-  setInterval(nextSlide, 5000000);
+  useEffect(() => {
+    const interval =setInterval(() => {
+      nextSlide()
+    }, 5000)
+    return () => clearInterval(interval)
+  })
+
   return (
     <div className="flex flex-col my-18 mx-2 text-white">
       <div className="flex group">
@@ -64,7 +70,7 @@ const Crew = () => {
           />
         </div>
         {/* side buttons */}
-        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black text-white cursor-pointer duration-300 ease-in-out">
+        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black text-white cursor-pointer duration-300 ease-in-out ">
           <BsChevronCompactLeft onClick={prevSlide} size={30} />
         </div>
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black text-white cursor-pointer duration-300 ease-in-out">
