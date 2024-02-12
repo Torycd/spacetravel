@@ -3,9 +3,9 @@ import { BsChevronCompactLeft } from "react-icons/bs";
 import { BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 
-import imageDouglasHurley from "../assets/image-douglas-hurley.png";
-import imageAnoushehAnsari from "../assets/image-anousheh-ansari.png";
-import imageVictorGlover from "../assets/image-victor-glover.png";
+import imageDouglasHurley from "../assets/image-douglas-hurley.webp";
+import imageAnoushehAnsari from "../assets/image-anousheh-ansari.webp";
+import imageVictorGlover from "../assets/image-victor-glover.webp";
 
 const Crew = () => {
   const slides = [
@@ -55,7 +55,7 @@ const Crew = () => {
   })
 
   return (
-    <div className="flex flex-col my-18 mx-2 text-white">
+    <div className="flex flex-col my-18 mx-2 text-white h-[100%]">
       <div className="flex group">
         <div className="w-1/2">
           <h1 className="text-4xl">{slides[currentIndex].position}</h1>
@@ -66,9 +66,10 @@ const Crew = () => {
           <img
             src={slides[currentIndex].url}
             alt={slides[currentIndex].name}
-            className="w-full h-64 object-cover"
+            className="w-auto h-auto object-fit"
           />
         </div>
+
         {/* side buttons */}
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black text-white cursor-pointer duration-300 ease-in-out ">
           <BsChevronCompactLeft onClick={prevSlide} size={30} />
