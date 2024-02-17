@@ -3,15 +3,16 @@ import { NavLink, Outlet } from "react-router-dom";
 const Technology = () => {
   return (
     <div className="text-white">
-      <div>
-        <h2 className="font-Inte">Space Launch 101</h2>
+      <div className="mx-30">
+        <h2 className="font-Inte mx-30">Space Launch 101</h2>
       </div>
+
       <div className="flex justify-between">
         <div className="flex gap-10">
           {/* rounded item */}
           <div className="text-black font-Inte ml-32 my-auto flex flex-col gap-5 font-bold">
             <NavLink
-              to="/Technology/"
+              to="/Technology"
               className={({ isActive }) =>
                 isActive
                   ? "bg-white w-24 h-24 rounded-full flex"

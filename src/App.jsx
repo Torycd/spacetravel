@@ -34,7 +34,7 @@ const App = () => {
           path: "/Technology",
           element: <Technology />,
           children: [
-            { path: "/Technology/", element: <Space/>},
+            { path: "/Technology", element: <Space/>},
             { path: "/Technology/Capsule", element: <Capsule/>},
             { path: "/Technology/Vehicle", element: <Vehicle/> },
           ],

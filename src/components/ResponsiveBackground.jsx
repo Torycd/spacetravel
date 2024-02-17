@@ -29,7 +29,11 @@ const ResponsiveBackground = ({ children }) => {
     backgroundImage = `url(/src/assets/background-crew-desktop.jpg)`;
     backgroundImageTablet = `url(/src/assets/background-crew-tablet.jpg)`;
     backgroundImageMobile = `url(/src/assets/background-crew-mobile.jpg)`;
-  } else if (location.pathname == "/Technology") {
+  } else if (
+    location.pathname == "/Technology" ||
+    location.pathname == "/Technology/Capsule" ||
+    location.pathname == "/Technology/Vehicle"
+  ) {
     backgroundImage = `url(/src/assets/background-technology-desktop.jpg)`;
     backgroundImageTablet = `url(/src/assets/background-technology-tablet.jpg)`;
     backgroundImageMobile = `url(/src/assets/background-technology-mobile.jpg)`;
