@@ -3,8 +3,8 @@ import { NavLink, Outlet } from "react-router-dom";
 const Technology = () => {
   return (
     <div className="text-white">
-      <div className="mx-30">
-        <h2 className="font-Inte mx-30">Space Launch 101</h2>
+      <div className="my-4 ml-36">
+        <h2 className="font-Inte text-2xl opacity-90">Space Launch 101</h2>
       </div>
 
       <div className="flex justify-between">
@@ -16,7 +16,7 @@ const Technology = () => {
               className={({ isActive }) =>
                 isActive
                   ? "bg-white w-24 h-24 rounded-full flex"
-                  : "border-2 w-24 h-24 rounded-full flex border-white bg-black text-white"
+                  : "border-2 w-24 h-24 rounded-full flex border-slate-200 bg-slate-800 text-white"
               }
               end
             >
@@ -27,7 +27,7 @@ const Technology = () => {
               className={({ isActive }) =>
                 isActive
                   ? "bg-white w-24 h-24 rounded-full flex"
-                  : "border-2 w-24 h-24 rounded-full flex border-white bg-black text-white"
+                  : "border-2 w-24 h-24 rounded-full flex border-slate-200 bg-slate-800 text-white"
               }
             >
               <span className="self-center mx-auto text-4xl">2</span>
@@ -37,7 +37,7 @@ const Technology = () => {
               className={({ isActive }) =>
                 isActive
                   ? "bg-white w-24 h-24 rounded-full flex"
-                  : "border-2 w-24 h-24 rounded-full flex border-white bg-black text-white"
+                  : "border-2 w-24 h-24 rounded-full flex border-slate-200 bg-slate-800 text-white"
               }
             >
               <span className="self-center mx-auto text-4xl">3</span>
