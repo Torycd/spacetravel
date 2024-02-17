@@ -31,6 +31,7 @@ const Crew = () => {
         "Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.",
     },
   ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -48,11 +49,11 @@ const Crew = () => {
   };
 
   useEffect(() => {
-    const interval =setInterval(() => {
-      nextSlide()
-    }, 5000)
-    return () => clearInterval(interval)
-  })
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+    return () => clearInterval(interval);
+  });
 
   return (
     <div className="flex flex-col my-18 mx-2 text-white h-[100%]">
