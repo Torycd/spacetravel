@@ -72,7 +72,7 @@ const Crew = () => {
             <img
               src={slides[currentIndex].url}
               alt={slides[currentIndex].name}
-              className="w-auto h-[560px] object-cover"
+              className="w-auto h-[560px] object-cover transition ease-in-out duration-700"
             />
           </div>
         </div>
