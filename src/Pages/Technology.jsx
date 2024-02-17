@@ -1,6 +1,26 @@
 import { NavLink, Outlet } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Technology = () => {
+  const location = useLocation();
+
+  let name = "Space capsule";
+  let statement =
+    "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earths atmospherewithout wings. Our capsule is where youll spend your time duringthe flight. It includes a space gym, cinema, and plenty of otheractivities to keep you entertained.";
+
+  if (location.pathname == "/Technology") {
+    name = "Spaceport";
+    statement =
+      "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earths rotation for launch.";
+  } else if (location.pathname == "/Technology/Capsule") {
+    name = "Space capsule";
+    statement =
+      "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earths atmospherewithout wings. Our capsule is where youll spend your time duringthe flight. It includes a space gym, cinema, and plenty of otheractivities to keep you entertained.";
+  } else if (location.pathname == "/Technology/Vehicle") {
+    name = "Launch vehicle";
+    statement =
+      "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!";
+  }
   return (
     <div className="text-white">
       <div className="my-4 ml-36">
@@ -48,17 +68,8 @@ const Technology = () => {
             <h1 className="text-2xl font-bold font-Inte opacity-70">
               The terminology...
             </h1>
-            <h2 className="text-6xl font-semibold font-Inte">Space capsule</h2>
-            <p className="right opacity-70">
-              A space capsule is an often-crewed spacecraft that uses a<br />
-              blunt-body reentry capsule to reenter the Earths atmosphere
-              <br />
-              without wings. Our capsule is where youll spend your time during
-              <br />
-              the flight. It includes a space gym, cinema, and plenty of other
-              <br />
-              activities to keep you entertained.
-            </p>
+            <h2 className="text-6xl font-semibold font-Inte">{name}</h2>
+            <p className="right opacity-70">{statement}</p>
           </div>
         </div>
         <Outlet />
