@@ -1,4 +1,4 @@
-import Tech1 from "../assets/image-launch-vehicle-portrait.jpg";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Technology = () => {
   return (
@@ -10,19 +10,43 @@ const Technology = () => {
         <div className="flex gap-10">
           {/* rounded item */}
           <div className="text-black font-Inte ml-32 my-auto flex flex-col gap-5 font-bold">
-            <div className="bg-white w-24 h-24 rounded-full flex">
+            <NavLink
+              to="/Technology/"
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-white w-24 h-24 rounded-full flex"
+                  : "border-2 w-24 h-24 rounded-full flex border-white bg-black text-white"
+              }
+              end
+            >
               <span className="self-center mx-auto text-4xl">1</span>
-            </div>
-            <div className="bg-white w-24 h-24 rounded-full flex">
+            </NavLink>
+            <NavLink
+              to="/Technology/Capsule"
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-white w-24 h-24 rounded-full flex"
+                  : "border-2 w-24 h-24 rounded-full flex border-white bg-black text-white"
+              }
+            >
               <span className="self-center mx-auto text-4xl">2</span>
-            </div>
-            <div className="bg-white w-24 h-24 rounded-full flex">
+            </NavLink>
+            <NavLink
+              to="/Technology/Vehicle"
+              className={({ isActive }) =>
+                isActive
+                  ? "bg-white w-24 h-24 rounded-full flex"
+                  : "border-2 w-24 h-24 rounded-full flex border-white bg-black text-white"
+              }
+            >
               <span className="self-center mx-auto text-4xl">3</span>
-            </div>
+            </NavLink>
           </div>
           {/* information */}
           <div className="my-auto flex flex-col gap-8 ">
-            <h1 className="text-2xl font-bold font-Inte opacity-70">The terminology...</h1>
+            <h1 className="text-2xl font-bold font-Inte opacity-70">
+              The terminology...
+            </h1>
             <h2 className="text-6xl font-semibold font-Inte">Space capsule</h2>
             <p className="right opacity-70">
               A space capsule is an often-crewed spacecraft that uses a<br />
@@ -36,7 +60,7 @@ const Technology = () => {
             </p>
           </div>
         </div>
-        <img src={Tech1} />
+        <Outlet />
       </div>
     </div>
   );

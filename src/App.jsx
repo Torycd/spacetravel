@@ -8,6 +8,9 @@ import Moon from "./components/Moon";
 import Mars from "./components/Mars";
 import Europa from "./components/Europa";
 import Titan from "./components/Titan";
+import Space from "./components/Technology/Space";
+import Capsule from "./components/Technology/Capsule";
+import Vehicle from "./components/Technology/Vehicle";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -27,7 +30,15 @@ const App = () => {
           ],
         },
         { path: "/Crew", element: <Crew /> },
-        { path: "/Technology", element: <Technology /> },
+        {
+          path: "/Technology",
+          element: <Technology />,
+          children: [
+            { path: "/Technology/", element: <Space/>},
+            { path: "/Technology/Capsule", element: <Capsule/>},
+            { path: "/Technology/Vehicle", element: <Vehicle/> },
+          ],
+        },
       ],
     },
   ]);
