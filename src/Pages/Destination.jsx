@@ -21,13 +21,13 @@ const Destination = () => {
 
 
   return (
-    <div className="text-white gap-2 grid sm:grid-cols-2">
+    <div className="text-white gap-2 grid lg:grid-cols-2">
       <div className="flex flex-col items-center">
         <img className="" src={img} alt="#" />
       </div>
 
       <div>
-        <div>
+        <div className="flex justify-center lg:justify-normal">
           <ul className="flex gap-5 mt-5">
             <li className="h-full flex items-center">
               <NavLink
