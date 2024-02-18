@@ -9,7 +9,7 @@ const Moon = () => {
         sites.
       </p>
       <hr className="bg-white lg:mr-40 flex justify-center lg:justify-normal " />
-      <div className="flex justify-center gap-8 lg:gap-0 lg:justify-around mr-40 font-Inte">
+      <div className="flex justify-center gap-8 lg:gap-0 lg:justify-around lg:mr-40 font-Inte">
         <span className="flex flex-col gap-2 justify-center lg:justify-normal">
           <p>Avg. distance</p>
           <p className="text-3xl">384,400 km Est</p>
