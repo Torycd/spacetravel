@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const SpaceNavigation = () => {
   return (
     <div className="flex text-white justify-between mt-2 m-2 sm:mt-10">
-      <div className="sm:ml-10 my-3">
+      <div className="sm:ml-10 lg:my-3">
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
           <g fill="none" fillRule="evenodd">
             <circle cx="24" cy="24" r="24" fill="#FFF" />
@@ -24,7 +24,7 @@ const SpaceNavigation = () => {
       </div>
 
       <div className="bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-transparent bg-opacity-20 hidden sm:block">
-        <ul className="flex justify-around gap-10 ml-40  mr-60 h-full font-medium">
+        <ul className="flex justify-around gap-10 lg:ml-40 ml-5 mr-2  lg:mr-60 h-full font-medium">
           <li className="h-full flex items-center">
             <NavLink
               to="/"

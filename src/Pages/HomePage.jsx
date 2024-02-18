@@ -2,15 +2,15 @@
 
 const HomePage = () => {
   return (      
-      <div className="text-white flex flex-col m-2 sm:flex-row justify-between">
-      <div className="flex flex-col gap-8 sm:ml-10 sm:my-32">
-        <p className="font-normal sm:text-3xl text-center sm:text-right">
+      <div className="text-white flex flex-col gap-2 m-2 md:flex-row sm:gap-0 justify-between">
+      <div className="flex flex-col gap-3 sm:ml-10 my-6 lg:my-32">
+        <p className="font-normal sm:text-3xl text-center md:text-right opacity-90">
           So, you want to travel to
         </p>
-        <h2 className="font-Inte sm:text-9xl text-7xl font-extrabold text-center sm:text-right">
+        <h2 className="font-Inte sm:text-9xl text-7xl font-extrabold text-center md:text-right">
           Space
         </h2>
-        <p className="mt-2 text-sm text-center sm:text-right">
+        <p className="mt-2 text-sm text-center md:text-right opacity-90">
           Lets face it; if you want to go to space, you might as well
           <br />
           genuinely go to outer space and not hover kind of on the
@@ -20,7 +20,7 @@ const HomePage = () => {
         </p>
       </div>
 
-      <div className="sm:w-64 sm:h-64 w-44 h-44 flex items-center justify-center rounded-full my-auto mx-auto bg-white sm:ml-40 sm:mr-60">
+      <div className="lg:w-64 lg:h-64 w-44 h-44 flex items-center justify-center rounded-full sm:my-auto mx-auto bg-white lg:ml-40 lg:mr-60">
         <h2 className="font-Inte text-black font-semibold sm:text-3xl">Explore</h2>
       </div>
     </div>
