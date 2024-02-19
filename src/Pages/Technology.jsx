@@ -75,7 +75,7 @@ const Technology = () => {
               The terminology...
             </h1>
             <h2 className="text-4xl md:text-6xl font-semibold font-Inte">{name}</h2>
-            <p className="text-center lg:right opacity-70">{statement}</p>
+            <p className="text-center lg:text-left opacity-70">{statement}</p>
           </div>
         </div>
         <Outlet />
