@@ -56,23 +56,23 @@ const Crew = () => {
   });
 
   return (
-    <div className="flex flex-col my-18 mx-2 text-white h-auto">
-      <div className="flex group">
-        <div className="w-1/2 px-7 pt-10 flex flex-col gap-6">
-          <h1 className="text-6xl font-Inte font-bold">
+    <div className="flexflex-col my-18 mx-2 text-white h-auto">
+      <div className="flex flex-col-reverse lg:flex-row group">
+        <div className="lg:w-1/2 px-7 pt-10 flex flex-col gap-6">
+          <h1 className="text-4xl md:text-6xl font-Inte font-bold">
             {slides[currentIndex].position}
           </h1>
-          <h1 className="text-5xl font-Inte font-bold">
+          <h1 className="text-3xl md:text-5xl font-Inte font-bold">
             {slides[currentIndex].name}
           </h1>
           <p>{slides[currentIndex].about}</p>
         </div>
-        <div className="w-1/2 h-[100%] overflow-hidden">
+        <div className="lg:w-1/2 h-[100%] overflow-hidden">
           <div className="w-[100%]">
             <img
               src={slides[currentIndex].url}
               alt={slides[currentIndex].name}
-              className="w-auto h-[560px] object-cover transition ease-in-out duration-700"
+              className="w-auto h-[320px] md:h-[440px] mx-auto lg:h-[560px] object-cover transition ease-in-out duration-700"
             />
           </div>
         </div>
