@@ -1,45 +1,45 @@
-import desktop from "../assets/background-home-desktop.jpg";
-import tablet from "../assets/background-home-tablet.jpg";
-import phone from "../assets/background-home-mobile.jpg";
+// import React from "react";
 import PropTypes from "prop-types";
 import { useLocation } from "react-router-dom";
+import desktopImage from "../assets/background-home-desktop.jpg";
+import tabletImage from "../assets/background-home-tablet.jpg";
+import mobileImage from "../assets/background-home-mobile.jpg";
 
 const ResponsiveBackground = ({ children }) => {
   const location = useLocation();
 
-  let backgroundImage = `url(${desktop})`;
-  let backgroundImageTablet = `url(${tablet})`;
-  let backgroundImageMobile = `url(${phone})`;
+  let backgroundImage = desktopImage;
+  let backgroundImageTablet = tabletImage;
+  let backgroundImageMobile = mobileImage;
 
-  if (location.pathname == "/") {
-    backgroundImage = `url(/src/assets/background-home-desktop.jpg)`;
-    backgroundImageTablet = `url(/src/assets/background-home-tablet.jpg)`;
-    backgroundImageMobile = `url(/src/assets/background-home-mobile.jpg)`;
-  } else if (
-    location.pathname == "/Destination" ||
-    location.pathname == "/Destination/Mars" ||
-    location.pathname == "/Destination/Moon" ||
-    location.pathname == "/Destination/Titan" ||
-    location.pathname == "/Destination/Europa"
-  ) {
-    backgroundImage = `url(/src/assets/background-destination-desktop.jpg)`;
-    backgroundImageTablet = `url(/src/assets/background-destination-tablet.jpg)`;
-    backgroundImageMobile = `url(/src/assets/background-destination-mobile.jpg)`;
-  } else if (location.pathname == "/Crew") {
-    backgroundImage = `url(/src/assets/background-crew-desktop.jpg)`;
-    backgroundImageTablet = `url(/src/assets/background-crew-tablet.jpg)`;
-    backgroundImageMobile = `url(/src/assets/background-crew-mobile.jpg)`;
-  } else if (
-    location.pathname == "/Technology" ||
-    location.pathname == "/Technology/Capsule" ||
-    location.pathname == "/Technology/Vehicle"
-  ) {
-    backgroundImage = `url(/src/assets/background-technology-desktop.jpg)`;
-    backgroundImageTablet = `url(/src/assets/background-technology-tablet.jpg)`;
-    backgroundImageMobile = `url(/src/assets/background-technology-mobile.jpg)`;
-  }
-
-  // console.log(location.pathname);
+  if (location.pathname === "/") {
+    backgroundImage = desktopImage;
+    backgroundImageTablet = tabletImage;
+    backgroundImageMobile = mobileImage;
+  } 
+  // else if (
+  //   location.pathname === "/Destination" ||
+  //   location.pathname === "/Destination/Mars" ||
+  //   location.pathname === "/Destination/Moon" ||
+  //   location.pathname === "/Destination/Titan" ||
+  //   location.pathname === "/Destination/Europa"
+  // ) {
+  //   backgroundImage = destinationDesktopImage;
+  //   backgroundImageTablet = destinationTabletImage;
+  //   backgroundImageMobile = destinationMobileImage;
+  // } else if (location.pathname === "/Crew") {
+  //   backgroundImage = crewDesktopImage;
+  //   backgroundImageTablet = crewTabletImage;
+  //   backgroundImageMobile = crewMobileImage;
+  // } else if (
+  //   location.pathname === "/Technology" ||
+  //   location.pathname === "/Technology/Capsule" ||
+  //   location.pathname === "/Technology/Vehicle"
+  // ) {
+  //   backgroundImage = technologyDesktopImage;
+  //   backgroundImageTablet = technologyTabletImage;
+  //   backgroundImageMobile = technologyMobileImage;
+  // }
 
   return (
     <>
@@ -47,7 +47,7 @@ const ResponsiveBackground = ({ children }) => {
       <div
         className="hidden lg:flex flex-col h-dvh fixed overflow-auto inset-0"
         style={{
-          backgroundImage: backgroundImage,
+          backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -58,7 +58,7 @@ const ResponsiveBackground = ({ children }) => {
       <div
         className="hidden md:flex flex-col lg:hidden h-dvh fixed overflow-auto inset-0"
         style={{
-          backgroundImage: backgroundImageTablet,
+          backgroundImage: `url(${backgroundImageTablet})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -69,7 +69,7 @@ const ResponsiveBackground = ({ children }) => {
       <div
         className="md:hidden flex flex-col bg-cover bg-center fixed overflow-auto inset-0 h-dvh"
         style={{
-          backgroundImage: backgroundImageMobile,
+          backgroundImage: `url(${backgroundImageMobile})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
