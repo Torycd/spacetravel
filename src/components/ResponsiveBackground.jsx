@@ -1,4 +1,3 @@
-// import React from "react";
 import PropTypes from "prop-types";
 import { useLocation } from "react-router-dom";
 import desktopImage from "../assets/background-home-desktop.jpg";
