@@ -42,7 +42,7 @@ const Destination = () => {
                 MOON
               </NavLink>
             </li>
-            <li className="h-full flex items-center pb-2">
+            <li className="h-full flex items-center">
               <NavLink
                 to="/Destination/Mars"
                 className={({ isActive }) =>

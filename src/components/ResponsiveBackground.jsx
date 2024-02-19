@@ -59,6 +59,8 @@ const ResponsiveBackground = ({ children }) => {
         className="hidden md:flex flex-col lg:hidden h-dvh fixed overflow-auto inset-0"
         style={{
           backgroundImage: backgroundImageTablet,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         {children}
