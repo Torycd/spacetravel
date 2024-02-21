@@ -1,6 +1,13 @@
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import ListNavigation from "./UI/ListNavigation";
 
 const SpaceNavigation = () => {
+  const [showNav, SetShowNav] = useState(false);
+  const HandleNav = () => {
+    SetShowNav(!showNav);
+  };
+
   return (
     <div className="flex text-white justify-between mt-2 m-2 sm:mt-10">
       <div className="sm:ml-10 lg:my-3">
@@ -15,14 +22,22 @@ const SpaceNavigation = () => {
         </svg>
       </div>
       <hr className="bg-white text-bold hidden sm:block" />
-      <div className="my-auto sm:hidden">
+      <div className="my-auto sm:hidden" onClick={HandleNav}>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21">
           <g fill="#D0D6F9" fillRule="evenodd">
             <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
           </g>
         </svg>
       </div>
-
+      <div
+        className={
+          showNav
+            ? "block fixed right-0 top-0 w-[100%] z-50 border-r h-full border-r-gray-[#4C51BF] bg-black ease-in-out duration-500 md:hidden"
+            : "fixed right-[-100%]"
+        }
+      >
+        <ListNavigation handleClick={HandleNav} />
+      </div>
       <div className="bg-gradient-to-r from-slate-800 via-slate-600 to-slate-800 bg-transparent bg-opacity-20 hidden sm:block">
         <ul className="flex justify-around gap-10 lg:ml-40 ml-5 mr-2  lg:mr-60 h-full font-medium">
           <li className="h-full flex items-center">
