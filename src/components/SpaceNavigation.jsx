@@ -32,7 +32,7 @@ const SpaceNavigation = () => {
       <div
         className={
           showNav
-            ? "block fixed right-0 top-0 w-[100%] z-50 border-r h-full border-r-gray-[#4C51BF] bg-black ease-in-out duration-500 md:hidden"
+            ? "block fixed right-0 top-0 w-[100%] z-50 border-r h-full border-r-gray-[#4C51BF] bg-black ease-in-out duration-500 sm:hidden"
             : "fixed right-[-100%]"
         }
       >
