@@ -56,43 +56,48 @@ const Crew = () => {
   });
 
   return (
-    <div className="flexflex-col my-18 mx-2 text-white h-auto">
-      <div className="flex flex-col-reverse lg:flex-row group">
-        <div className="lg:w-1/2 px-7 pt-10 flex flex-col gap-6">
-          <h1 className="text-4xl md:text-6xl font-Inte font-bold">
-            {slides[currentIndex].position}
-          </h1>
-          <h1 className="text-3xl md:text-5xl font-Inte font-bold">
-            {slides[currentIndex].name}
-          </h1>
-          <p>{slides[currentIndex].about}</p>
-        </div>
-        <div className="lg:w-1/2 h-[100%] overflow-hidden">
-          <div className="w-[100%]">
-            <img
-              src={slides[currentIndex].url}
-              alt={slides[currentIndex].name}
-              className="w-auto h-[320px] md:h-[440px] mx-auto lg:h-[560px] object-cover transition ease-in-out duration-700"
-            />
+    <>
+      <div className="flex justify-center lg:justify-normal lg:my-4 md:ml-36 text-white">
+        <h2 className="font-Inte text-2xl opacity-90">02 Meet your crew</h2>
+      </div>
+      <div className="flex flex-col lg:my-18 mx-2 text-white h-auto">
+        <div className=" lg:mb-7 flex flex-col-reverse lg:flex-row group">
+          <div className="lg:w-1/2 px-7 lg:pt-10 flex flex-col gap-4">
+            <h1 className="text-3xl md:text-6xl font-Inte font-bold">
+              {slides[currentIndex].position}
+            </h1>
+            <h1 className="text-2xl md:text-5xl font-Inte font-bold">
+              {slides[currentIndex].name}
+            </h1>
+            <p>{slides[currentIndex].about}</p>
           </div>
-        </div>
+          <div className="lg:w-1/2 h-[100%] overflow-hidden">
+            <div className="w-[100%]">
+              <img
+                src={slides[currentIndex].url}
+                alt={slides[currentIndex].name}
+                className="w-auto h-[230px] md:h-[440px] mx-auto lg:h-[480px] object-cover transition ease-in-out duration-700"
+              />
+            </div>
+          </div>
 
-        {/* side buttons */}
-        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black text-white cursor-pointer duration-300 ease-in-out ">
-          <BsChevronCompactLeft onClick={prevSlide} size={30} />
-        </div>
-        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black text-white cursor-pointer duration-300 ease-in-out">
-          <BsChevronCompactRight onClick={nextSlide} size={30} />
-        </div>
-      </div>
-      <div className="flex top-4 justify-center py-2">
-        {slides.map((slides, slideIndex) => (
-          <div key={slides.name} className="text-2xl cursor-pointer">
-            <RxDotFilled onClick={() => gotoSlide(slideIndex)} />
+          {/* side buttons */}
+          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black text-white cursor-pointer duration-300 ease-in-out ">
+            <BsChevronCompactLeft onClick={prevSlide} size={30} />
           </div>
-        ))}
+          <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black text-white cursor-pointer duration-300 ease-in-out">
+            <BsChevronCompactRight onClick={nextSlide} size={30} />
+          </div>
+        </div>
+        <div className="flex top-4 justify-center py-2">
+          {slides.map((slides, slideIndex) => (
+            <div key={slides.name} className="text-2xl cursor-pointer">
+              <RxDotFilled onClick={() => gotoSlide(slideIndex)} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

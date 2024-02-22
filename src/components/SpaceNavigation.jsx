@@ -9,6 +9,7 @@ const SpaceNavigation = () => {
   };
 
   return (
+    
     <div className="flex text-white justify-between mt-2 m-2 sm:mt-10">
       <div className="sm:ml-10 lg:my-3">
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
@@ -32,7 +33,7 @@ const SpaceNavigation = () => {
       <div
         className={
           showNav
-            ? "block fixed right-0 top-0 w-[100%] z-50 border-r h-full border-r-gray-[#4C51BF] bg-black ease-in-out duration-500 sm:hidden"
+            ? "block fixed right-0 top-0 w-[100%] z-50 border-r h-full border-r-gray-[#4C51BF] bg-slate-900 ease-in-out duration-500 sm:hidden"
             : "fixed right-[-100%]"
         }
       >

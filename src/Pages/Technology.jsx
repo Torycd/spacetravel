@@ -23,8 +23,8 @@ const Technology = () => {
   }
   return (
     <div className="text-white">
-      <div className="my-4 md:ml-36">
-        <h2 className="font-Inte text-2xl opacity-90">Space Launch 101</h2>
+      <div className="flex justify-center lg:justify-normal lg:my-4 md:ml-36 text-white">
+        <h2 className="font-Inte text-2xl opacity-90">03 Space launch 101</h2>
       </div>
 
       <div className="flex flex-col-reverse gap-10 md:gap-0 lg:flex-row justify-between">
